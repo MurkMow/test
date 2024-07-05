@@ -14,6 +14,9 @@ public class LoanApplicationRequestDTO {
     private String passportSeries;
     private String passportNumber;
 
+    public LoanApplicationRequestDTO() {
+    }
+
     public LoanApplicationRequestDTO(BigDecimal amount, int term, String firstName, String lastName, String middleName, String email, LocalDate birthdate, String passportNumber, String passportSeries) {
         this.amount = amount;
         this.term = term;

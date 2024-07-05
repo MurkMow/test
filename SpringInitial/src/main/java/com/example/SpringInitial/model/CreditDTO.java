@@ -13,6 +13,9 @@ public class CreditDTO  {
     private boolean isSalaryClient;
     private List<PaymentScheduleElement> paymentSchedule;
 
+    public CreditDTO() {
+    }
+
     public CreditDTO(BigDecimal amount, List<PaymentScheduleElement> paymentSchedule, boolean isSalaryClient, boolean isInsuranceEnabled, BigDecimal psk, BigDecimal rate, BigDecimal monthlyPayment, int term) {
         this.amount = amount;
         this.paymentSchedule = paymentSchedule;

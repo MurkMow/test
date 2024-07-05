@@ -11,6 +11,9 @@ public class PaymentScheduleElement {
     private BigDecimal debtPayment;
     private BigDecimal remainingDebt;
 
+    public PaymentScheduleElement() {
+    }
+
     public PaymentScheduleElement(int number, LocalDate date, BigDecimal totalPayment, BigDecimal interestPayment, BigDecimal debtPayment, BigDecimal remainingDebt) {
         this.number = number;
         this.date = date;

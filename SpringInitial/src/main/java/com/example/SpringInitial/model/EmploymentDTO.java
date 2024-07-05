@@ -8,17 +8,16 @@ public class EmploymentDTO {
     private BigDecimal salary;
     private Enum position;
     private int workExperienceTotal;
+    private int workExperienceCurrent;
 
-    public EmploymentDTO(Enum employmentStatus, int workExperienceTotal, Enum position, BigDecimal salary, String employerINN) {
-        this.employmentStatus = employmentStatus;
-        this.workExperienceTotal = workExperienceTotal;
-        this.position = position;
-        this.salary = salary;
-        this.employerINN = employerINN;
-    }
+    public EmploymentDTO() {}
 
     public void setEmploymentStatus(Enum employmentStatus) {
         this.employmentStatus = employmentStatus;
+    }
+
+    public void setWorkExperienceCurrent(int workExperienceCurrent) {
+        this.workExperienceCurrent = workExperienceCurrent;
     }
 
     public void setWorkExperienceTotal(int workExperienceTotal) {
@@ -41,19 +40,32 @@ public class EmploymentDTO {
         return employmentStatus;
     }
 
-    public int getWorkExperienceTotal() {
-        return workExperienceTotal;
-    }
-
-    public Enum getPosition() {
-        return position;
-    }
-
     public String getEmployerINN() {
         return employerINN;
     }
 
     public BigDecimal getSalary() {
         return salary;
+    }
+
+    public Enum getPosition() {
+        return position;
+    }
+
+    public int getWorkExperienceTotal() {
+        return workExperienceTotal;
+    }
+
+    public int getWorkExperienceCurrent() {
+        return workExperienceCurrent;
+    }
+
+    public EmploymentDTO(Enum employmentStatus, int workExperienceCurrent, int workExperienceTotal, Enum position, BigDecimal salary, String employerINN) {
+        this.employmentStatus = employmentStatus;
+        this.workExperienceCurrent = workExperienceCurrent;
+        this.workExperienceTotal = workExperienceTotal;
+        this.position = position;
+        this.salary = salary;
+        this.employerINN = employerINN;
     }
 }

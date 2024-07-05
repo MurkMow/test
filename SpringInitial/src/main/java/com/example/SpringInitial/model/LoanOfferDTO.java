@@ -1,8 +1,11 @@
 package com.example.SpringInitial.model;
 
+import org.springframework.data.annotation.Id;
+
 import java.math.BigDecimal;
 
 public class LoanOfferDTO {
+    @Id
     private long applicationID;
     private BigDecimal requestedAmount;
     private BigDecimal totalAmount;
@@ -11,6 +14,9 @@ public class LoanOfferDTO {
     private BigDecimal rate;
     private Boolean isInsuranceEnabled;
     private Boolean isSalaryClient;
+
+    public LoanOfferDTO() {
+    }
 
     public LoanOfferDTO(long applicationID, BigDecimal requestedAmount, BigDecimal totalAmount, int term, BigDecimal monthlyPayment, BigDecimal rate, Boolean isInsuranceEnabled, Boolean isSalaryClient) {
         this.applicationID = applicationID;

@@ -1,5 +1,7 @@
 package com.example.SpringInitial.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -9,18 +11,24 @@ public class ScoringDataDTO {
     private String firstName;
     private String lastName;
     private String middleName;
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Enum gender;
     private LocalDate birthdate;
     private String passportSeries;
     private String passportNumber;
     private LocalDate passportIssueDate;
     private String passportIssueBranch;
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Enum maritalStatus;
     private int dependentAmount;
     private EmploymentDTO employment;
     private String account;
     private boolean isInsuranceEnabled;
     private boolean isSalaryClient;
+
+    public ScoringDataDTO() {
+
+    }
 
     public ScoringDataDTO(BigDecimal amount, int term, String firstName, String lastName, String middleName, Enum gender, LocalDate birthdate, String passportNumber, String passportSeries, LocalDate passportIssueDate, String passportIssueBranch, Enum maritalStatus, int dependentAmount, EmploymentDTO employment, String account, boolean isInsuranceEnabled, boolean isSalaryClient) {
         this.amount = amount;
